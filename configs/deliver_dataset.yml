@@ -1,0 +1,71 @@
+DATASET:
+  WORKERS: 4
+  NAME: DELIVER
+  ROOT: 'data'
+  IGNORE_LABEL: 25
+  MODALS: [ # ['img', 'depth', 'event', 'lidar']
+    'img'
+  ]
+  CASES: [
+    'cloud',
+    'fog',
+    'night',
+    'sun',
+    'rain'
+  ]
+  CLASSES: [
+    "Building",
+    "Fence",
+    "Other",
+    "Pedestrian",
+    "Pole",
+    "RoadLine",
+    "Road",
+    "SideWalk",
+    "Vegetation",
+    "Cars",
+    "Wall",
+    "TrafficSign",
+    "Sky",
+    "Ground",
+    "Bridge",
+    "RailTrack",
+    "GroundRail",
+    "TrafficLight",
+    "Static",
+    "Dynamic",
+    "Water",
+    "Terrain",
+    "TwoWheeler",
+    "Bus",
+    "Truck"
+  ]
+  PALETTE: [
+    [ 70,  70,  70 ],
+    [ 100, 40,  40 ],
+    [ 55,  90,  80 ],
+    [ 220, 20,  60 ],
+    [ 153, 153, 153 ],
+    [ 157, 234, 50 ],
+    [ 128, 64,  128 ],
+    [ 244, 35,  232 ],
+    [ 107, 142, 35 ],
+    [ 0,   0,   142 ],
+    [ 102, 102, 156 ],
+    [ 220, 220, 0 ],
+    [ 70,  130, 180 ],
+    [ 81,  0,   81 ],
+    [ 150, 100, 100 ],
+    [ 230, 150, 140 ],
+    [ 180, 165, 180 ],
+    [ 250, 170, 30 ],
+    [ 110, 190, 160 ],
+    [ 170, 120, 50 ],
+    [ 45,  60,  150 ],
+    [ 145, 170, 100 ],
+    [ 0,   0,   230 ],
+    [ 0,   60,  100 ],
+    [ 0,   0,   70 ]
+  ]
+  MEAN: [0.485, 0.456, 0.406]
+  STD: [0.229, 0.224, 0.225]

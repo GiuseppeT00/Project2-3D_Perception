@@ -1,0 +1,31 @@
+DEVICE          : 'cuda'
+SAVE_DIR        : 'output'
+
+MODEL:
+  NAME          : 'DeepLabV3'
+  BACKBONE      : 'ResNet101'
+  PRETRAINED    : True
+  MULTI_BACKBONE: False
+  ACTIVATION    : 'softmax'
+  DECOMPOSITION : 'PCA'
+
+TRAIN:
+  IMAGE_SIZE    : [ 1024, 1024 ]
+  BATCH_SIZE    : 4
+  EPOCHS        : 100
+  RESUME        : False
+  CHECKPOINT    : ''
+  AUX           : False
+
+EVAL:
+  MODEL_PATH    : 'output/DeepLabV3_ResNet101_I_model_best.pth'
+  IMAGE_SIZE    : [1024, 1024]
+  BATCH_SIZE    : 3
+
+LOSS:
+  NAME          : 'CrossEntropy'
+
+OPTIMIZER:
+  NAME          : 'AdamW'  # or SGD
+  LR            : 0.00007
+  WEIGHT_DECAY  : 0.01
